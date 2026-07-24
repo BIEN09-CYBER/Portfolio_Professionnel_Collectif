@@ -1,5 +1,13 @@
+import { useTheme } from "../context/ThemeContext";
+
 function ThemeToggle() {
-  return <button>Changer le thème</button>;
+  const { theme, toggleTheme } = useTheme();
+
+  return (
+    <button onClick={toggleTheme}>
+      {theme === "light" ? "🌙 Mode sombre" : "☀️ Mode clair"}
+    </button>
+  );
 }
 
 export default ThemeToggle;
