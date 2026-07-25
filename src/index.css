@@ -5,3 +5,16 @@
 @import "./styles/footer.css";
 @import "./styles/cards.css";
 @import "./styles/home.css";
+@import "./styles/contact.css";
+
+body.light {
+  background-color: #ffffff;
+  color: #222222;
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
