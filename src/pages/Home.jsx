@@ -7,7 +7,7 @@ import projects from "../data/projects";
 function Home() {
   return (
     <>
-      <section>
+      <section className="home-hero">
         <h1>Bienvenue sur notre Portfolio Professionnel Collectif</h1>
 
         <p>
@@ -16,11 +16,10 @@ function Home() {
         </p>
       </section>
 
-      <section>
+      <section className="home-section">
         <h2>Notre équipe</h2>
 
         <div className="cards-grid">
-
           {team.map((member) => (
             <TeamCard
               key={member.id}
@@ -30,7 +29,7 @@ function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="home-section">
         <h2>Nos projets</h2>
 
         <div className="cards-grid">
