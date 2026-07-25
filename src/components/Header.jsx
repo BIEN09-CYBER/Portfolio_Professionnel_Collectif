@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import ThemeToggle from "./ThemeToggle";
+import LanguageSelector from "./LanguageSelector";
 
 function Header() {
   return (
@@ -17,7 +18,10 @@ function Header() {
 
       <Navbar />
 
-      <ThemeToggle />
+      <div className="header-actions">
+        <LanguageSelector />
+        <ThemeToggle />
+      </div>
     </header>
   );
 }

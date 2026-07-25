@@ -1,9 +1,12 @@
+import { useLanguage } from "../context/LanguageContext";
+
 function LanguageSelector() {
+  const { language, toggleLanguage } = useLanguage();
+
   return (
-    <select>
-      <option value="fr">Français</option>
-      <option value="en">English</option>
-    </select>
+    <button onClick={toggleLanguage}>
+      {language === "fr" ? "🇬🇧 English" : "🇫🇷 Français"}
+    </button>
   );
 }
 
