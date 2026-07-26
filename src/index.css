@@ -7,7 +7,8 @@
 @import "./styles/cards.css";
 @import "./styles/home.css";
 @import "./styles/contact.css";
-
+@import "./styles/responsive.css";
+@import "./styles/animations.css";
 body.light {
   background-color: #ffffff;
   color: #222222;

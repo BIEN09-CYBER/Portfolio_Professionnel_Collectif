@@ -1,0 +1,28 @@
+.cards-grid article {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-grid article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+nav a {
+  transition: color .3s ease;
+}
+
+.project-details-image {
+  transition: transform .3s ease;
+}
+
+.project-details-image:hover {
+  transform: scale(1.02);
+}
