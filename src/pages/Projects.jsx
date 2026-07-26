@@ -1,11 +1,15 @@
 import { useState } from "react";
 
+import { useLanguage } from "../context/LanguageContext";
+
 import ProjectCard from "../components/ProjectCard";
 import FilterBar from "../components/FilterBar";
 
 import projects from "../data/projects";
 
 function Projects() {
+  const { t } = useLanguage();
+
   const [selectedCategory, setSelectedCategory] = useState("Tous");
 
   const filteredProjects =
@@ -17,11 +21,9 @@ function Projects() {
 
   return (
     <section>
-      <h1>Nos projets</h1>
+      <h1>{t("projectsTitle")}</h1>
 
-      <p>
-        Voici les principaux projets réalisés par notre équipe.
-      </p>
+      <p>{t("projectsSubtitle")}</p>
 
       <FilterBar
         selectedCategory={selectedCategory}

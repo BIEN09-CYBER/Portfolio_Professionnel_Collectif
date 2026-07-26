@@ -2,23 +2,29 @@ const projects = [
   {
     id: 1,
     title: "PA GEN KANPE",
-    description: "Système intelligent de gestion des files d'attente.",
-    image: "/favicon.svg",
+
+    description: {
+      fr: "Système intelligent de gestion des files d'attente.",
+      en: "Intelligent queue management system.",
+    },
+
     category: "Backend",
+
+    image: "/favicon.svg",
   },
+
   {
     id: 2,
     title: "Portfolio Professionnel",
-    description: "Projet de session React.",
-    image: "/favicon.svg",
+
+    description: {
+      fr: "Projet de session React.",
+      en: "React semester project.",
+    },
+
     category: "Frontend",
-  },
-  {
-    id: 3,
-    title: "Marketplace HERDIX",
-    description: "Application e-commerce Full Stack.",
+
     image: "/favicon.svg",
-    category: "Full Stack",
   },
 ];
 

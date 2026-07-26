@@ -1,3 +1,5 @@
+import { useLanguage } from "../context/LanguageContext";
+
 import TeamCard from "../components/TeamCard";
 import ProjectCard from "../components/ProjectCard";
 
@@ -5,19 +7,18 @@ import team from "../data/team";
 import projects from "../data/projects";
 
 function Home() {
+  const { t } = useLanguage();
+
   return (
     <>
-      <section className="home-hero">
-        <h1>Bienvenue sur notre Portfolio Professionnel Collectif</h1>
+      <section>
+        <h1>{t("homeTitle")}</h1>
 
-        <p>
-          Découvrez notre équipe, nos compétences et les projets réalisés durant
-          notre formation.
-        </p>
+        <p>{t("homeSubtitle")}</p>
       </section>
 
-      <section className="home-section">
-        <h2>Notre équipe</h2>
+      <section>
+        <h2>{t("ourTeam")}</h2>
 
         <div className="cards-grid">
           {team.map((member) => (
@@ -29,8 +30,8 @@ function Home() {
         </div>
       </section>
 
-      <section className="home-section">
-        <h2>Nos projets</h2>
+      <section>
+        <h2>{t("ourProjects")}</h2>
 
         <div className="cards-grid">
           {projects.map((project) => (

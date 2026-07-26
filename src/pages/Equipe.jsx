@@ -1,70 +1,57 @@
 import { useEffect, useState } from "react";
 
+import { useLanguage } from "../context/LanguageContext";
+
 import TeamCard from "../components/TeamCard";
 import team from "../data/team";
 
 import { getUser } from "../services/githubService";
 
-
 function Equipe() {
+  const { t } = useLanguage();
 
   const [githubUser, setGithubUser] = useState(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
-
     async function loadGithubUser() {
       try {
         const data = await getUser();
         setGithubUser(data);
-
       } catch (err) {
         setError(err.message);
       }
     }
 
     loadGithubUser();
-
   }, []);
-
 
   return (
     <section>
+      <h1>{t("teamTitle")}</h1>
 
-      <h1>Notre équipe</h1>
-
-      <p>
-        Découvrez les membres du groupe ainsi que leurs compétences.
-      </p>
-
+      <p>{t("teamSubtitle")}</p>
 
       <div className="cards-grid">
-
         {team.map((member) => (
           <TeamCard
             key={member.id}
             member={member}
           />
         ))}
-
       </div>
 
-
       <section>
-
-        <h2>Profil GitHub</h2>
+        <h2>GitHub</h2>
 
         {error && <p>{error}</p>}
-
 
         {!githubUser && !error && (
           <p>Chargement GitHub...</p>
         )}
 
-
         {githubUser && (
           <article className="team-card">
-
             <img
               src={githubUser.avatar_url}
               alt={githubUser.login}
@@ -85,16 +72,11 @@ function Equipe() {
             <p>
               Repositories publics : {githubUser.public_repos}
             </p>
-
           </article>
         )}
-
       </section>
-
-
     </section>
   );
 }
-
 
 export default Equipe;

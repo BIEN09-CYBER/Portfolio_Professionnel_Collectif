@@ -1,8 +1,13 @@
 import { useParams } from "react-router-dom";
+
+import { useLanguage } from "../context/LanguageContext";
+
 import projects from "../data/projects";
 
 function ProjectDetails() {
   const { id } = useParams();
+
+  const { language, t } = useLanguage();
 
   const project = projects.find(
     (item) => item.id === Number(id)
@@ -23,10 +28,10 @@ function ProjectDetails() {
       />
 
       <p>
-        <strong>Catégorie :</strong> {project.category}
+        <strong>{t("category")} :</strong> {project.category}
       </p>
 
-      <p>{project.description}</p>
+      <p>{project.description[language]}</p>
     </section>
   );
 }

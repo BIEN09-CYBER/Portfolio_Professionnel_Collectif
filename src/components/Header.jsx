@@ -1,8 +1,12 @@
+import { useLanguage } from "../context/LanguageContext";
+
 import Navbar from "./Navbar";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSelector from "./LanguageSelector";
 
 function Header() {
+  const { t } = useLanguage();
+
   return (
     <header className="header">
       <div className="header-top">
@@ -14,7 +18,7 @@ function Header() {
             height="42"
           />
 
-          <h1>Portfolio Professionnel Collectif</h1>
+          <h1>{t("portfolioTitle")}</h1>
         </div>
       </div>
 

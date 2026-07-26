@@ -5,7 +5,9 @@ function LanguageSelector() {
 
   return (
     <button onClick={toggleLanguage}>
-      {language === "fr" ? "🇬🇧 English" : "🇫🇷 Français"}
+      {language === "fr"
+        ? "🇬🇧 English"
+        : "🇫🇷 Français"}
     </button>
   );
 }

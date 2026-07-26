@@ -1,20 +1,28 @@
+import { useLanguage } from "../context/LanguageContext";
+
 function TeamCard({ member }) {
+  const { language, t } = useLanguage();
+
   return (
     <article className="team-card">
       <img
         src={member.photo}
-        alt={member.name}
+        alt={typeof member.name === "string" ? member.name : member.name[language]}
         width="180"
         height="180"
       />
 
-      <h3>{member.name}</h3>
+      <h3>
+        {typeof member.name === "string"
+          ? member.name
+          : member.name[language]}
+      </h3>
 
       <p>
-        <strong>Rôle :</strong> {member.role}
+        <strong>{t("role")} :</strong> {member.role}
       </p>
 
-      <p>{member.bio}</p>
+      <p>{member.bio[language]}</p>
     </article>
   );
 }

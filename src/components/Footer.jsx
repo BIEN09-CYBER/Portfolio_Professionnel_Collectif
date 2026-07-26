@@ -1,7 +1,11 @@
+import { useLanguage } from "../context/LanguageContext";
+
 function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer>
-      <p>© 2026 Portfolio Professionnel Collectif</p>
+      <p>© 2026 {t("portfolioTitle")}</p>
     </footer>
   );
 }

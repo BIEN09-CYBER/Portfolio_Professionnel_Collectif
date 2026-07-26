@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 function Contact() {
+  const { t } = useLanguage();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,17 +26,17 @@ function Contact() {
     const newErrors = {};
 
     if (!form.name.trim()) {
-      newErrors.name = "Le nom est obligatoire.";
+      newErrors.name = t("requiredName");
     }
 
     if (!form.email.trim()) {
-      newErrors.email = "L'adresse email est obligatoire.";
+      newErrors.email = t("requiredEmail");
     } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = "Adresse email invalide.";
+      newErrors.email = t("invalidEmail");;
     }
 
     if (!form.message.trim()) {
-      newErrors.message = "Le message est obligatoire.";
+      newErrors.message = t("requiredMessage");
     }
 
     return newErrors;
@@ -51,18 +54,21 @@ function Contact() {
     }
 
     setErrors({});
-    setSuccess("Le formulaire est valide. L'envoi au serveur sera ajouté dans la prochaine étape.");
+    setSuccess(t("contactSuccess"));
   }
 
   return (
     <section className="contact-section">
-      <h1>Contact</h1>
+      <h1>{t("contactTitle")}</h1>
 
-      <form className="contact-form" onSubmit={handleSubmit} noValidate>
-
+      <form
+        className="contact-form"
+        onSubmit={handleSubmit}
+        noValidate
+      >
         <div className="form-group">
           <label htmlFor="name">
-            Nom
+            {t("name")}
           </label>
 
           <input
@@ -71,7 +77,7 @@ function Contact() {
             name="name"
             value={form.name}
             onChange={handleChange}
-            placeholder="Votre nom"
+            placeholder={t("namePlaceholder")}
           />
 
           {errors.name && (
@@ -81,10 +87,9 @@ function Contact() {
           )}
         </div>
 
-
         <div className="form-group">
           <label htmlFor="email">
-            Email
+            {t("email")}
           </label>
 
           <input
@@ -93,7 +98,7 @@ function Contact() {
             name="email"
             value={form.email}
             onChange={handleChange}
-            placeholder="exemple@email.com"
+            placeholder={t("emailPlaceholder")}
           />
 
           {errors.email && (
@@ -103,10 +108,9 @@ function Contact() {
           )}
         </div>
 
-
         <div className="form-group">
           <label htmlFor="message">
-            Message
+            {t("message")}
           </label>
 
           <textarea
@@ -115,7 +119,7 @@ function Contact() {
             rows="6"
             value={form.message}
             onChange={handleChange}
-            placeholder="Votre message..."
+            placeholder={t("messagePlaceholder")}
           />
 
           {errors.message && (
@@ -125,11 +129,9 @@ function Contact() {
           )}
         </div>
 
-
         <button type="submit">
-          Envoyer
+          {t("send")}
         </button>
-
       </form>
 
       {success && (
@@ -138,7 +140,6 @@ function Contact() {
         </p>
       )}
     </section>
-
   );
 }
 

@@ -1,4 +1,8 @@
+import { useLanguage } from "../context/LanguageContext";
+
 function FilterBar({ selectedCategory, onSelectCategory }) {
+  const { t } = useLanguage();
+
   const categories = [
     "Tous",
     "Frontend",
@@ -11,12 +15,17 @@ function FilterBar({ selectedCategory, onSelectCategory }) {
       {categories.map((category) => (
         <button
           key={category}
-          onClick={() => onSelectCategory(category)}
           className={
-            selectedCategory === category ? "active-filter" : ""
+            selectedCategory === category
+              ? "active-filter"
+              : ""
           }
+          onClick={() => onSelectCategory(category)}
         >
-          {category}
+          {category === "Tous" && t("all")}
+          {category === "Frontend" && t("frontend")}
+          {category === "Backend" && t("backend")}
+          {category === "Full Stack" && t("fullstack")}
         </button>
       ))}
     </div>
