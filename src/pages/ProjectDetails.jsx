@@ -5,7 +5,7 @@ function ProjectDetails() {
   const { id } = useParams();
 
   const project = projects.find(
-    (project) => project.id === Number(id)
+    (item) => item.id === Number(id)
   );
 
   if (!project) {
@@ -13,8 +13,18 @@ function ProjectDetails() {
   }
 
   return (
-    <section>
+    <section className="project-details">
       <h1>{project.title}</h1>
+
+      <img
+        src={project.image}
+        alt={project.title}
+        className="project-details-image"
+      />
+
+      <p>
+        <strong>Catégorie :</strong> {project.category}
+      </p>
 
       <p>{project.description}</p>
     </section>

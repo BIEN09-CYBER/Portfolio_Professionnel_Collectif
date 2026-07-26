@@ -1,10 +1,24 @@
-function FilterBar() {
+function FilterBar({ selectedCategory, onSelectCategory }) {
+  const categories = [
+    "Tous",
+    "Frontend",
+    "Backend",
+    "Full Stack",
+  ];
+
   return (
-    <div>
-      <button>Tous</button>
-      <button>Frontend</button>
-      <button>Backend</button>
-      <button>Full Stack</button>
+    <div className="filter-bar">
+      {categories.map((category) => (
+        <button
+          key={category}
+          onClick={() => onSelectCategory(category)}
+          className={
+            selectedCategory === category ? "active-filter" : ""
+          }
+        >
+          {category}
+        </button>
+      ))}
     </div>
   );
 }
