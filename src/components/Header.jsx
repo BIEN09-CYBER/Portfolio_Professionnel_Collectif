@@ -13,7 +13,7 @@ function Header() {
         <div className="header-logo">
           <img
             src="/favicon.svg"
-            alt="Logo"
+            alt={t("portfolioTitle")}
             width="42"
             height="42"
           />

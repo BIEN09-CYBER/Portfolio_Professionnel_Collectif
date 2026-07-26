@@ -18,13 +18,13 @@ function Equipe() {
       try {
         const data = await getUser();
         setGithubUser(data);
-      } catch (err) {
-        setError(err.message);
+      } catch {
+        setError(t("githubError"));
       }
     }
 
     loadGithubUser();
-  }, []);
+  }, [t]);
 
   return (
     <section>
@@ -42,12 +42,12 @@ function Equipe() {
       </div>
 
       <section>
-        <h2>GitHub</h2>
+        <h2>{t("githubProfile")}</h2>
 
         {error && <p>{error}</p>}
 
         {!githubUser && !error && (
-          <p>Chargement GitHub...</p>
+          <p>{t("loadingGithub")}</p>
         )}
 
         {githubUser && (
@@ -62,15 +62,15 @@ function Equipe() {
             </h3>
 
             <p>
-              GitHub : {githubUser.login}
+              {t("github")} : {githubUser.login}
             </p>
 
             <p>
-              Followers : {githubUser.followers}
+              {t("followers")} : {githubUser.followers}
             </p>
 
             <p>
-              Repositories publics : {githubUser.public_repos}
+              {t("repositories")} : {githubUser.public_repos}
             </p>
           </article>
         )}

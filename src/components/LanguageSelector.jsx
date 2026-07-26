@@ -1,13 +1,16 @@
 import { useLanguage } from "../context/LanguageContext";
 
 function LanguageSelector() {
-  const { language, toggleLanguage } = useLanguage();
+  const { language, toggleLanguage, t } = useLanguage();
 
   return (
-    <button onClick={toggleLanguage}>
+    <button
+      onClick={toggleLanguage}
+      aria-label={t("language")}
+    >
       {language === "fr"
-        ? "🇬🇧 English"
-        : "🇫🇷 Français"}
+        ? t("english")
+        : t("french")}
     </button>
   );
 }

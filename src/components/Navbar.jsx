@@ -5,7 +5,7 @@ function Navbar() {
   const { t } = useLanguage();
 
   return (
-    <nav>
+    <nav aria-label="Navigation principale">
       <ul>
         <li>
           <NavLink to="/">
