@@ -7,6 +7,7 @@ function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
 
@@ -32,7 +33,11 @@ function Contact() {
     if (!form.email.trim()) {
       newErrors.email = t("requiredEmail");
     } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = t("invalidEmail");;
+      newErrors.email = t("invalidEmail");
+    }
+
+    if (!form.subject.trim()) {
+      newErrors.subject = t("requiredSubject");
     }
 
     if (!form.message.trim()) {
@@ -42,7 +47,7 @@ function Contact() {
     return newErrors;
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     const validationErrors = validate();
@@ -54,7 +59,35 @@ function Contact() {
     }
 
     setErrors({});
-    setSuccess(t("contactSuccess"));
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSuccess(data.message);
+
+        setForm({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSuccess("");
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Erreur de connexion au serveur.");
+    }
   }
 
   return (
@@ -67,9 +100,7 @@ function Contact() {
         noValidate
       >
         <div className="form-group">
-          <label htmlFor="name">
-            {t("name")}
-          </label>
+          <label htmlFor="name">{t("name")}</label>
 
           <input
             id="name"
@@ -88,9 +119,7 @@ function Contact() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">
-            {t("email")}
-          </label>
+          <label htmlFor="email">{t("email")}</label>
 
           <input
             id="email"
@@ -109,9 +138,28 @@ function Contact() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="message">
-            {t("message")}
+          <label htmlFor="subject">
+            {t("subject")}
           </label>
+
+          <input
+            id="subject"
+            type="text"
+            name="subject"
+            value={form.subject}
+            onChange={handleChange}
+            placeholder={t("subjectPlaceholder")}
+          />
+
+          {errors.subject && (
+            <span className="error-message">
+              {errors.subject}
+            </span>
+          )}
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="message">{t("message")}</label>
 
           <textarea
             id="message"

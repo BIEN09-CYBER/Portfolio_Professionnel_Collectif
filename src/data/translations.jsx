@@ -30,11 +30,12 @@ const translations = {
       "Voici les principaux projets réalisés par notre équipe.",
     category: "Catégorie",
 
-    // Contact
-    contactTitle: "Contact",
-    name: "Nom",
-    email: "Email",
-    message: "Message",
+   // Contact
+contactTitle: "Contact",
+name: "Nom",
+email: "Email",
+subject: "Sujet",
+message: "Message",
 
     // Buttons
     seeDetails: "Voir les détails",
@@ -55,17 +56,18 @@ const translations = {
     githubError: "Impossible de charger les données GitHub.",
 
     // Validation
-    requiredName: "Le nom est obligatoire.",
-    requiredEmail: "L'adresse email est obligatoire.",
-    invalidEmail: "Adresse email invalide.",
-    requiredMessage: "Le message est obligatoire.",
-    contactSuccess:
-      "Le formulaire est valide. L'envoi au serveur sera ajouté dans la prochaine étape.",
+requiredName: "Le nom est obligatoire.",
+requiredEmail: "L'adresse email est obligatoire.",
+invalidEmail: "Adresse email invalide.",
+requiredSubject: "Le sujet est obligatoire.",
+requiredMessage: "Le message est obligatoire.",
+contactSuccess: "Votre message a été envoyé avec succès.",
 
     // Placeholders
-    namePlaceholder: "Votre nom",
-    emailPlaceholder: "exemple@email.com",
-    messagePlaceholder: "Votre message...",
+namePlaceholder: "Votre nom",
+emailPlaceholder: "exemple@email.com",
+subjectPlaceholder: "Objet du message",
+messagePlaceholder: "Votre message...",
 
     // Theme & Language
     theme: "Changer le thème",
@@ -109,10 +111,11 @@ const translations = {
     category: "Category",
 
     // Contact
-    contactTitle: "Contact",
-    name: "Name",
-    email: "Email",
-    message: "Message",
+contactTitle: "Contact",
+name: "Name",
+email: "Email",
+subject: "Subject",
+message: "Message",
 
     // Buttons
     seeDetails: "View Details",
@@ -133,17 +136,18 @@ const translations = {
     githubError: "Unable to load GitHub data.",
 
     // Validation
-    requiredName: "Name is required.",
-    requiredEmail: "Email is required.",
-    invalidEmail: "Invalid email address.",
-    requiredMessage: "Message is required.",
-    contactSuccess:
-      "The form is valid. Server submission will be added in the next step.",
+requiredName: "Name is required.",
+requiredEmail: "Email is required.",
+invalidEmail: "Invalid email address.",
+requiredSubject: "Subject is required.",
+requiredMessage: "Message is required.",
+contactSuccess: "Your message has been sent successfully.",
 
     // Placeholders
-    namePlaceholder: "Your name",
-    emailPlaceholder: "example@email.com",
-    messagePlaceholder: "Your message...",
+namePlaceholder: "Your name",
+emailPlaceholder: "example@email.com",
+subjectPlaceholder: "Message subject",
+messagePlaceholder: "Your message...",
 
     // Theme & Language
     theme: "Change theme",
