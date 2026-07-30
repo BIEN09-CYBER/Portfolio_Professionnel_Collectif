@@ -1,38 +1,25 @@
 import { NavLink } from "react-router-dom";
-import { useLanguage } from "../context/LanguageContext";
 
-function Navbar() {
-  const { t } = useLanguage();
-
+export default function Navbar() {
   return (
-    <nav aria-label="Navigation principale">
+    <nav className="navbar" aria-label="Navigation principale">
       <ul>
         <li>
-          <NavLink to="/">
-            {t("navHome")}
-          </NavLink>
+          <NavLink to="/">Accueil</NavLink>
         </li>
 
         <li>
-          <NavLink to="/equipe">
-            {t("navTeam")}
-          </NavLink>
+          <NavLink to="/equipe">Équipe</NavLink>
         </li>
 
         <li>
-          <NavLink to="/projets">
-            {t("navProjects")}
-          </NavLink>
+          <NavLink to="/projets">Projets</NavLink>
         </li>
 
         <li>
-          <NavLink to="/contact">
-            {t("navContact")}
-          </NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </nav>
   );
 }
-
-export default Navbar;

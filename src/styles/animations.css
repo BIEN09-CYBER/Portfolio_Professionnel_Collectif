@@ -8,21 +8,35 @@
 }
 
 button {
-  transition: 0.3s;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-button:hover {
+button:hover,
+button:focus {
   transform: scale(1.05);
+  outline: 2px solid var(--primary-color);
 }
 
 nav a {
-  transition: color .3s ease;
+  transition: color 0.3s ease;
+}
+
+nav a:focus {
+  outline: 2px solid var(--primary-color);
 }
 
 .project-details-image {
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-details-image:hover {
   transform: scale(1.02);
+}
+
+/* Accessibilité: réduire animasyon si itilizatè prefere */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
