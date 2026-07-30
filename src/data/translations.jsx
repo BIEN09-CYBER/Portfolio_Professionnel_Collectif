@@ -75,6 +75,9 @@ const translations = {
 
     english: "🇬🇧 English",
     french: "🇫🇷 Français",
+
+    navigation = "Navigation principale",
+    footer = "Pied de page",
   },
 
   en: {
@@ -153,6 +156,10 @@ const translations = {
 
     english: "🇬🇧 English",
     french: "🇫🇷 Français",
+
+    navigation = "Main navigation",
+
+    footer= "Footer",
   },
 };
 

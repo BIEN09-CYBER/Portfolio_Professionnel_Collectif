@@ -4,7 +4,7 @@ function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer>
+    <footer aria-label={t("footer")}>
       <p>© 2026 {t("portfolioTitle")}</p>
     </footer>
   );
