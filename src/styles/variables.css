@@ -1,26 +1,50 @@
-:root {
-  /* Colors */
-  --primary-color: #2563eb;
-  --secondary-color: #7c3aed;
+/* ===========================
+   Couleurs
+=========================== */
 
-  --background-color: #f5f7fb;
-  --surface-color: #ffffff;
+:root{
 
-  --text-color: #1f2937;
-  --text-light: #6b7280;
+    /* Couleurs principales */
 
-  /* Border */
-  --border-color: #e5e7eb;
+    --color-primary:#2563eb;
+    --color-primary-hover:#1d4ed8;
 
-  /* Radius */
-  --radius: 14px;
+    --color-bg-light:#ffffff;
+    --color-bg-dark:#121212;
 
-  /* Shadow */
-  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --color-surface-light:#f8f9fa;
+    --color-surface-dark:#1e1e1e;
 
-  /* Transition */
-  --transition: 0.3s ease;
+    --color-text-light:#222222;
+    --color-text-dark:#f5f5f5;
 
-  /* Width */
-  --container-width: 1200px;
+    --color-border:#dcdcdc;
+
+    /* Typographie */
+
+    --font-main:"Roboto",sans-serif;
+
+    --font-size-title:2rem;
+    --font-size-subtitle:1.5rem;
+    --font-size-text:1rem;
+
+    /* Espacement */
+
+    --spacing-xs:.5rem;
+    --spacing-sm:1rem;
+    --spacing-md:2rem;
+    --spacing-lg:3rem;
+
+    /* Coins arrondis */
+
+    --radius:8px;
+
+    /* Ombres */
+
+    --shadow:0 4px 12px rgba(0,0,0,.10);
+
+    /* Animation */
+
+    --transition:.3s ease;
+
 }

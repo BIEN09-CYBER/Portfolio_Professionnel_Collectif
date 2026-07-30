@@ -1,75 +1,54 @@
-.header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
-
-  padding: 1.5rem 2rem;
-
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 2rem;
+    background:var(--color-bg-light);
+    color:var(--color-text-light);
 }
 
-.header-top {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  margin-bottom: 1.5rem;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:.75rem;
 }
 
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.logo img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
 }
 
-.header-logo img {
-  width: 55px;
-  height: 55px;
+.logo h1{
+    margin:0;
+    font-size:1.5rem;
 }
 
-.header-logo h1 {
-  margin: 0;
-
-  font-size: 2rem;
-
-  font-weight: 700;
+nav ul{
+    display:flex;
+    gap:1.5rem;
+    list-style:none;
+    margin:0;
+    padding:0;
 }
 
-.header-bottom {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 1rem;
+nav a{
+    text-decoration:none;
+    color:var(--color-text-light);
+    font-weight:500;
+    transition:color .3s ease;
 }
 
-.header-actions {
-  display: flex;
-
-  gap: 1rem;
+nav a:hover{
+    text-decoration:underline;
 }
 
-.header-actions button {
-  cursor: pointer;
-
-  padding: 0.55rem 1rem;
-
-  border: none;
-
-  border-radius: 8px;
-
-  background: white;
-
-  color: var(--primary-color);
-
-  font-weight: 600;
-
-  transition: 0.3s;
+nav a.active{
+    font-weight:700;
+    border-bottom:2px solid currentColor;
 }
 
-.header-actions button:hover {
-  transform: translateY(-2px);
+nav a:focus-visible{
+    outline:3px solid #0d6efd;
+    outline-offset:4px;
 }

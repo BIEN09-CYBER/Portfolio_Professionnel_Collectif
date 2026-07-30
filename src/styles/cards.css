@@ -9,108 +9,54 @@
   background: var(--surface-color);
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
-
   overflow: hidden;
-
   transition: all .3s ease;
 }
 
 .team-card:hover,
-.project-card:hover{
+.project-card:hover {
   transform: translateY(-6px);
-
   box-shadow: 0 12px 28px rgba(0,0,0,.12);
 }
 
 /* Images */
-
 .team-card img,
 .project-card img {
   width: 85%;
-
   height: 150px;
-
   margin: 16px auto;
-
   display: block;
-
   object-fit: contain;
-
   border-radius: 12px;
-
   background: #f8f9fa;
 }
 
 /* Texte */
-
 .team-card h3,
-.project-card h3{
-
-  margin:0 16px 10px;
-
-  color:var(--text-color);
-
-  font-size:1.35rem;
+.project-card h3 {
+  margin: 0 16px 10px;
+  color: var(--text-color);
+  font-size: 1.35rem;
 }
 
 .team-card p,
-.project-card p{
-
-  margin:0 16px 12px;
-
-  line-height:1.6;
-
-  color:var(--text-light);
+.project-card p {
+  margin: 0 16px 12px;
+  line-height: 1.6;
+  color: var(--text-light);
 }
 
 /* Lien */
-
-.project-card a{
-
-  display:inline-block;
-
-  margin:0 16px 20px;
-
-  color:var(--primary-color);
-
-  text-decoration:none;
-
-  font-weight:600;
+.project-card a {
+  display: inline-block;
+  margin: 0 16px 20px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.project-card a:hover{
-
-  text-decoration:underline;
-}
-
-.filter-bar {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-
-  margin: 2rem 0;
-}
-
-.filter-bar button {
-  padding: 0.7rem 1.3rem;
-
-  border: none;
-
-  border-radius: 8px;
-
-  cursor: pointer;
-
-  background: #e5e7eb;
-
-  transition: 0.3s;
-}
-
-.filter-bar button:hover {
-  background: var(--primary-color);
-  color: white;
-}
-
-.active-filter {
-  background: var(--primary-color) !important;
-  color: white;
+.project-card a:hover,
+.project-card a:focus {
+  text-decoration: underline;
+  outline: 2px solid var(--primary-color);
 }

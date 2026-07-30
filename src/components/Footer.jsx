@@ -1,13 +1,28 @@
-import { useLanguage } from "../context/LanguageContext";
+import { Link } from "react-router-dom";
 
-function Footer() {
-  const { t } = useLanguage();
-
+export default function Footer() {
   return (
-    <footer>
-      <p>© 2026 {t("portfolioTitle")}</p>
+    <footer className="footer">
+      <p>
+        &copy; {new Date().getFullYear()} Portfolio Professionnel Collectif -
+        Tous droits réservés
+      </p>
+
+      <nav aria-label="Liens secondaires">
+        <ul>
+          <li>
+            <Link to="/mentions-legales">
+              Mentions légales
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/accessibilite">
+              Accessibilité
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </footer>
   );
 }
-
-export default Footer;

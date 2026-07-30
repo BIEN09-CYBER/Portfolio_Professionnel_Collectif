@@ -1,37 +1,38 @@
-import { useLanguage } from "../context/LanguageContext";
+import { Link, NavLink } from "react-router-dom";
 
-import Navbar from "./Navbar";
-import ThemeToggle from "./ThemeToggle";
-import LanguageSelector from "./LanguageSelector";
-
-function Header() {
-  const { t } = useLanguage();
-
+export default function Header() {
   return (
     <header className="header">
-      <div className="header-top">
-        <div className="header-logo">
+      <div className="logo">
+        <Link to="/">
           <img
-            src="/favicon.svg"
-            alt={t("portfolioTitle")}
-            width="42"
-            height="42"
+            src="/icons.svg"
+            alt="Logo du Portfolio Professionnel Collectif"
           />
+        </Link>
 
-          <h1>{t("portfolioTitle")}</h1>
-        </div>
+        <h1>Portfolio Professionnel Collectif</h1>
       </div>
 
-      <div className="header-bottom">
-        <Navbar />
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li>
+            <NavLink to="/">Accueil</NavLink>
+          </li>
 
-        <div className="header-actions">
-          <LanguageSelector />
-          <ThemeToggle />
-        </div>
-      </div>
+          <li>
+            <NavLink to="/equipe">Équipe</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/projets">Projets</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
-
-export default Header;
