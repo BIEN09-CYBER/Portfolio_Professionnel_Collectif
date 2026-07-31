@@ -1,7 +1,12 @@
 const team = [
   {
     id: 1,
-    name: "Bienné Rwove Herth",
+
+    name: {
+      fr: "Bienné Rwove Herth",
+      en: "Bienné Rwove Herth",
+    },
+
     role: "Frontend Developer",
 
     bio: {
@@ -9,14 +14,17 @@ const team = [
       en: "Software Engineering Student.",
     },
 
+    github: "BIEN09-CYBER",
+
     photo: "/favicon.svg",
   },
 
   {
     id: 2,
+
     name: {
-      fr: "Membre 2",
-      en: "Member 2",
+      fr: "Edme Elysee Dieuveil",
+      en: "Edme Elysee Dieuveil",
     },
 
     role: "Backend Developer",
@@ -26,14 +34,17 @@ const team = [
       en: "Server Developer.",
     },
 
+    github: "elyseedev",
+
     photo: "/favicon.svg",
   },
 
   {
     id: 3,
+
     name: {
-      fr: "Membre 3",
-      en: "Member 3",
+      fr: "Bijoux Chrislin",
+      en: "Bijoux Chrislin",
     },
 
     role: "UI / UX Designer",
@@ -42,6 +53,8 @@ const team = [
       fr: "Responsable de l'interface.",
       en: "Responsible for the user interface.",
     },
+
+    github: "Cbijoux",
 
     photo: "/favicon.svg",
   },

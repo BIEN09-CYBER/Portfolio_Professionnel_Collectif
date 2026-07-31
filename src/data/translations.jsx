@@ -78,6 +78,8 @@ const translations = {
 
     navigation = "Navigation principale",
     footer = "Pied de page",
+
+    found:"Page introuvable",
   },
 
   en: {
@@ -160,6 +162,8 @@ const translations = {
     navigation = "Main navigation",
 
     footer= "Footer",
+
+    found: "Page not found"
   },
 };
 
