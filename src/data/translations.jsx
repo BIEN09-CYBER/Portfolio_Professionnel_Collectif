@@ -80,6 +80,10 @@ const translations = {
     footer = "Pied de page",
 
     found:"Page introuvable",
+    
+    copyright: "Tous les droits réservés.",
+    load:"Chargement....",
+
   },
 
   en: {
@@ -163,7 +167,13 @@ const translations = {
 
     footer= "Footer",
 
-    found: "Page not found"
+    found: "Page not found",
+    
+    copyright: "All rights reserved.",
+
+    load: "Loarding....."
+
+
   },
 };
 
