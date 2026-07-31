@@ -14,16 +14,16 @@ function ProjectDetails() {
   );
 
   if (!project) {
-    return <h2>Projet introuvable.</h2>;
+    return <h2>{t("found")}</h2>;
   }
 
   return (
     <section className="project-details">
-      <h1>{project.title}</h1>
+      <h1>{project.title[language]}</h1>
 
       <img
         src={project.image}
-        alt={project.title}
+        alt={project.title[language]}
         className="project-details-image"
       />
 

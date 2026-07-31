@@ -16,7 +16,7 @@ function Equipe() {
   useEffect(() => {
     async function loadGithubUser() {
       try {
-        const data = await getUser(member.github);
+        const data = await getUser(team[0].github);
         setGithubUser(data);
       } catch {
         setError(t("githubError"));
