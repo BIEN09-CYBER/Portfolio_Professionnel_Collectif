@@ -1,0 +1,138 @@
+/* ==========================
+   TEAM SECTION
+========================== */
+
+.team {
+  padding: 80px 20px;
+  background-color: var(--background-color);
+}
+
+.team .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.team-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+/* ==========================
+   GRID DES MEMBRES
+========================== */
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ==========================
+   CARTE MEMBRE
+========================== */
+
+.team-card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.team-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.team-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+.team-role {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.team-description {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==========================
+   RÉSEAUX SOCIAUX
+========================== */
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.team-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.team-social a:hover,
+.team-social a:focus {
+  background: var(--primary-hover);
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 768px) {
+
+  .team {
+    padding: 60px 15px;
+  }
+
+  .team-title {
+    font-size: 2rem;
+  }
+
+  .team-grid {
+    gap: 20px;
+  }
+
+  .team-image {
+    height: 240px;
+  }
+
+}

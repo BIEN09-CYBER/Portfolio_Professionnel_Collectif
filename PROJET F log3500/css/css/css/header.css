@@ -1,0 +1,19 @@
+/* ====== HEADER ====== */
+header {
+  background: #004080;
+  color: white;
+  padding: 20px;
+}
+
+/* Flexbox pour aligner logo + titre */
+header .flex {
+  display: flex;
+  align-items: center;   /* centre verticalement */
+  justify-content: center; /* centre horizontalement */
+  gap: 15px;             /* espace entre logo et texte */
+}
+
+header .logo {
+  height: 60px;  
+  margin-right: 15px;        /* taille du logo */
+}

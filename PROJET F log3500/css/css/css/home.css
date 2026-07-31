@@ -1,0 +1,15 @@
+/* ====== HOME PAGE ====== */
+.hero {
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2em;
+}
+
+.presentation {
+  padding: 40px 0;
+  text-align: center;
+}
