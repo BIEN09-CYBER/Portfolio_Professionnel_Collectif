@@ -21,8 +21,8 @@ const translations = {
     teamSubtitle:
       "Découvrez les membres du groupe ainsi que leurs compétences.",
     role: "Rôle",
-    member2: "Membre 2",
-    member3: "Membre 3",
+    member2: "Edme Elysee Dieuveil",
+    member3: "Bijoux Chrislin",
 
     // Projects
     projectsTitle: "Nos projets",
@@ -77,6 +77,15 @@ messagePlaceholder: "Votre message...",
 
     english: "🇬🇧 English",
     french: "🇫🇷 Français",
+
+    navigation :"Navigation principale",
+    footer:"Pied de page",
+
+    found:"Page introuvable",
+    
+    copyright: "Tous les droits réservés.",
+    load:"Chargement....",
+
   },
 
   en: {
@@ -101,8 +110,8 @@ messagePlaceholder: "Votre message...",
     teamSubtitle:
       "Meet our team members and discover their skills.",
     role: "Role",
-    member2: "Member 2",
-    member3: "Member 3",
+    member2: "Edme Elysee Dieuveil",
+    member3: "Bijoux Chrislin",
 
     // Projects
     projectsTitle: "Projects",
@@ -157,6 +166,18 @@ messagePlaceholder: "Your message...",
 
     english: "🇬🇧 English",
     french: "🇫🇷 Français",
+
+    navigation: "Main navigation",
+
+    footer: "Footer",
+
+    found: "Page not found",
+    
+    copyright: "All rights reserved.",
+
+    load: "Loarding....."
+
+
   },
 };
 

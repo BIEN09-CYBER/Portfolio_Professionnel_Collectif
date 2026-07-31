@@ -1,6 +1,10 @@
+import { useLanguage } from "../context/LanguageContext";
+
 function NotFound() {
+  const { t } = useLanguage();
+
   return (
-    <h1>Page introuvable</h1>
+    <h1>{t("found")}</h1>
   );
 }
 

@@ -33,11 +33,7 @@ function Contact() {
     if (!form.email.trim()) {
       newErrors.email = t("requiredEmail");
     } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = t("invalidEmail");
-    }
-
-    if (!form.subject.trim()) {
-      newErrors.subject = t("requiredSubject");
+      newErrors.email = t("invalidEmail");;
     }
 
     if (!form.message.trim()) {
@@ -109,10 +105,15 @@ function Contact() {
             value={form.name}
             onChange={handleChange}
             placeholder={t("namePlaceholder")}
+            required
+            aria-required="true"
           />
 
           {errors.name && (
-            <span className="error-message">
+            <span
+              className="error-message"
+              aria-live="polite"
+            >
               {errors.name}
             </span>
           )}
@@ -128,10 +129,15 @@ function Contact() {
             value={form.email}
             onChange={handleChange}
             placeholder={t("emailPlaceholder")}
+            required
+            aria-required="true"
           />
 
           {errors.email && (
-            <span className="error-message">
+            <span
+              className="error-message"
+              aria-live="polite"
+            >
               {errors.email}
             </span>
           )}
@@ -168,10 +174,15 @@ function Contact() {
             value={form.message}
             onChange={handleChange}
             placeholder={t("messagePlaceholder")}
+            required
+            aria-required="true"
           />
 
           {errors.message && (
-            <span className="error-message">
+            <span
+              className="error-message"
+              aria-live="polite"
+            >
               {errors.message}
             </span>
           )}
@@ -183,7 +194,10 @@ function Contact() {
       </form>
 
       {success && (
-        <p className="success-message">
+        <p
+          className="success-message"
+          aria-live="polite"
+        >
           {success}
         </p>
       )}

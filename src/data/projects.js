@@ -1,7 +1,11 @@
 const projects = [
   {
     id: 1,
-    title: "PA GEN KANPE",
+
+    title: {
+      fr: "PA GEN KANPE",
+      en: "PA GEN KANPE",
+    },
 
     description: {
       fr: "Système intelligent de gestion des files d'attente.",
@@ -15,7 +19,11 @@ const projects = [
 
   {
     id: 2,
-    title: "Portfolio Professionnel",
+
+    title: {
+      fr: "Portfolio Professionnel",
+      en: "Professional Portfolio",
+    },
 
     description: {
       fr: "Projet de session React.",

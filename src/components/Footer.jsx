@@ -4,8 +4,12 @@ function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer>
-      <p>© 2026 {t("portfolioTitle")}</p>
+    <footer className="footer">
+      <p>
+        &copy; {new Date().getFullYear()} {t("portfolioTitle")}
+      </p>
+
+      <p>{t("copyright")}</p>
     </footer>
   );
 }
